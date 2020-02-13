@@ -61,7 +61,7 @@ do {                                                                 \
 #define ARGO_QH_PORT 5100
 #define ARGO_CHARDRV_PORT 15100
 #define ARGO_CHARDRV_RING_SIZE \
-  (XEN_ARGO_ROUNDUP((((4096)*4) - sizeof(xen_argo_ring_t)-XEN_ARGO_ROUNDUP(1))))
+  (XEN_ARGO_ROUNDUP((((4096)*4) - (8 * XEN_ARGO_ROUNDUP(1)))))
 
 #define ARGO_CHARDRV_NAME  "[argo-chardrv]"
 
